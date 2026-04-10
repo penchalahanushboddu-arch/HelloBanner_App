@@ -2,15 +2,15 @@ package org.example;
 
 class HelloApp{
     public static void main(String [] args){
-        String name;
+        String names;
+
         if (args.length > 0) {
-            name = args[0];
-        }
-        else {
-            name = "World";
+            names = String.join(", ", args);  // join all names with comma
+        } else {
+            names = "World";  // default
         }
 
-        System.out.println("Hello, " + name + "!");
+        System.out.println("Hello, " + names + "!");
 
     }
 }
