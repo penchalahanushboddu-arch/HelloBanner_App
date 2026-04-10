@@ -7,15 +7,12 @@ class HelloApp{
         if (args.length == 0) {
             names = "World";
         } else {
-            boolean first = true;
-
             for (String name : args) {
-                if (!first) {
-                    names += ", ";
-                }
-                names += name;
-                first = false;
+                names += name + ", ";
             }
+
+            // remove last ", "
+            names = names.substring(0, names.length() - 2);
         }
 
         System.out.println("Hello, " + names + "!");
