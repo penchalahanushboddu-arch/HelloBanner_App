@@ -1,21 +1,15 @@
 package org.example;
 
-class HelloApp{
-    public static void main(String [] args){
-        String names = "";
-
+public class HelloApp {
+    public static void main(String[] args) {
+        String greeting;
         if (args.length == 0) {
-            names = "World";
+            greeting = "Hello, World!";
         } else {
-            for (String name : args) {
-                names += name + ", ";
-            }
-
-            // remove last ", "
-            names = names.substring(0, names.length() - 2);
+            String names = String.join(", ", args);
+            greeting = "Hello, " + names + "!";
         }
-
-        System.out.println("Hello, " + names + "!");
-
-    }
+        System.out.println(greeting);
+        }
 }
+
